@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <base target="_top" />
+  <!-- Add any external scripts and stylesheets here -->
+  <script crossorigin src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+
+  <script crossorigin src="https://unpkg.com/gas-client@1.1.1/dist/index.js"></script>
+  <script crossorigin src="https://unpkg.com/@types/react@18.2.66/index.d.ts"></script>
+
+
+  <style>
+    .data-\[state\=open\]\:animate-accordion-down[data-state=open] {
+      animation: accordion-down 0.2s ease-out;
+    }
+
+    .data-\[state\=closed\]\:animate-accordion-up[data-state=closed] {
+      animation: accordion-up 0.2s ease-out;
+    }
+
+    @keyframes accordion-up {
+      0% {
+        height: var(--radix-accordion-content-height);
+      }
+
+      100% {
+        height: 0;
+      }
+    }
+
+    @keyframes accordion-down {
+      from {
+        height: 0;
+      }
+
+      to {
+        height: var(--radix-accordion-content-height);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <section id="index">
+    <script type="module" src="./index.jsx"></script>
+  </section>
+</body>
+
+</html>
